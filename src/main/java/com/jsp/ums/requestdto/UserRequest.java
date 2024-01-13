@@ -1,6 +1,7 @@
 package com.jsp.ums.requestdto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,8 +16,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class UserRequest {
 
-	@NotNull(message = "Username cannot be null")
-	@NotBlank
+	@NotEmpty(message = "Username cannot be null")
 	private String userName;
 	
 	@NotNull
